@@ -502,7 +502,7 @@ function localPlace(q){const p=findPlace(q);return p&&!p.approx?p:null}
 let sample=null, lookupCtl=null, workCtl=null, lastVM=null;
 // Where lookups go. Inside claude.ai the page uses Claude directly.
 // On your own website, put your Cloudflare Worker URL here (see README).
-const LOOKUP_API_URL=""; // ← paste your Worker URL between the quotes, e.g. "https://career-compass.yourname.workers.dev"
+const LOOKUP_API_URL="https://career-compasss.umarfrqi123.workers.dev"; // ← paste your Worker URL between the quotes, e.g. "https://career-compass.yourname.workers.dev"
 function workerSample(url){
   const KEY="cc_ans_", DAY=86400000;
   const parse=t=>{try{return JSON.parse(t)}catch(e){}const m=t.match(/```(?:json)?\s*([\s\S]*?)```/);if(m)try{return JSON.parse(m[1])}catch(e){}
